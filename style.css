@@ -1,4 +1,33 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
 
+/* CLASSES */
+
+nav .brand-logo {
+	color: #d500f9;
+	font-family: 'Squada One', sans-serif;
+	font-size: 3em;
+}
+
+nav {
+	box-shadow: none;
+}
+
+.h1-style {
+	color: #d500f9;
+	font-family: 'Squada One', sans-serif;
+	margin-bottom: 0;
+}
+
+.h4-style {
+	color: #616161;
+	margin-top: 0;
+}
+
+.my-container {
+	margin: 0 50px 0 0;
+}
 
 /* PULSING EFFECT */
 .blob {
