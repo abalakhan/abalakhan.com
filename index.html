@@ -24,24 +24,31 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Lato font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Poppins:wght@200;300;400;700&display=swap"
       rel="stylesheet"
     />
 
-    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Squada+One&display=swap" rel="stylesheet">
+    <!-- Squada One Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
 
-    </head>
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
   <body>
     <nav class="transparent">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo" style="margin-left: 20px"
-          >AB</a
-        >
+        <a href="#" class="brand-logo" style="margin-left: 20px">AB</a>
       </div>
     </nav>
 
@@ -58,7 +65,7 @@
           4-columns-wide on medium screens,
           12-columns-wide on small screens  -->
         <div class="row">
-          <div class="col hide-on-small-only m3 l2">
+          <div class="col hide-on-small-only m4 l4">
             <ul class="section table-of-contents">
               <li><a href="#introduction">home</a></li>
               <li><a href="#structure">Structure</a></li>
@@ -68,25 +75,30 @@
         </div>
       </div>
 
-      <div class="col s12 m9 l9">
-        <!-- 
+      <div class="row" id="home">
+        <div class="col s12 m8 l8">
+          <!-- 
           This content will be:
           9-columns-wide on large screens,
           8-columns-wide on medium screens,
           12-columns-wide on small screens  -->
-        <div class="container">
           <h1 class="h1-style">
             Hi, I am Anastasiia! <span style="font-size: 0.7em">♡</span>
           </h1>
-          <h4 class="h4-style">
-            I am a Full Stack Web Developer and art lover based in New Orleans, LA
-          </h4>
+          <p class="paragraph-style">
+            I am a Full Stack Web Developer specializing in MERN stack, as well
+            as Java, Python, Javascript, PHP and other technologies.
+          </p>
+          <p class="paragraph-style">
+            I am currently based in New Orleans, LA area.
+          </p>
         </div>
       </div>
+      <!-- end of the section content -->
     </div>
 
     <!-- ACTION BUTTON -->
-    
+
     <div class="fixed-action-btn">
       <a class="btn-floating btn-large purple accent-2 blob">
         <i class="material-icons">chat_bubble</i>
@@ -110,7 +122,7 @@
         </li>
         <li>
           <a
-            href="mailto:anabalasia@gmail.com"
+            href="mailto:abalakha@uno.edu"
             target="_blank"
             class="btn-floating purple purple accent-1"
             ><i class="fa-solid fa-envelope"></i
@@ -119,15 +131,12 @@
       </ul>
     </div>
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
 
     <footer class="page-footer purple accent-3">
       <div class="footer-copyright">
         <div class="container center">
-          <p>
-            Built with ♡
-            by Anastasiia Balakhan
-          </p>
+          <p>Built with ♡ by Anastasiia Balakhan</p>
         </div>
       </div>
     </footer>

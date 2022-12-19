@@ -1,5 +1,5 @@
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 /* CLASSES */
@@ -10,23 +10,41 @@ nav .brand-logo {
 	font-size: 3em;
 }
 
-nav {
+nav .nav-wrapper {
 	box-shadow: none;
 }
+
+/* .section {
+	padding-top: 5%;
+} */
 
 .h1-style {
 	color: #d500f9;
 	font-family: 'Squada One', sans-serif;
-	margin-bottom: 0;
 }
 
-.h4-style {
-	color: #616161;
+.paragraph-style{
+	font-size: 1.5em;
+	color: #757575 ;
 	margin-top: 0;
+	text-align: left;
+	margin-right: 15%;
+	line-height: 1.5em;
+	font-weight: 400;
 }
 
-.my-container {
-	margin: 0 50px 0 0;
+
+.table-of-contents a {
+	font-size: 1.15rem;
+	color: #757575;
+}
+
+.table-of-contents a:hover{
+	border-left: 2px solid #d500f9;
+}
+
+.table-of-contents a:active {
+	color: black;
 }
 
 /* PULSING EFFECT */
