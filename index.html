@@ -15,11 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/88c3bdaf7a.js"
-      crossorigin="anonymous"
-    ></script>
+    
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +39,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap"
       rel="stylesheet"
     />
+
   </head>
 
   <body>
@@ -55,7 +52,7 @@
     <!-- Navbar goes here -->
 
     <!-- Page Layout here -->
-    <div class="row">
+    <div class="row" id="nav">
       <div class="col s12 m3 l2">
         <!-- Note that "m4 l3" was added -->
         <!-- Grey navigation panel
@@ -67,36 +64,46 @@
         <div class="row">
           <div class="col hide-on-small-only m4 l4">
             <ul class="section table-of-contents">
-              <li><a href="#introduction">home</a></li>
-              <li><a href="#structure">Structure</a></li>
-              <li><a href="#initialization">Intialization</a></li>
+              <li><a href="#home">intro</a></li>
+              <li><a href="#structure">projects</a></li>
+              <li><a href="#initialization">contact</a></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="row" id="home">
-        <div class="col s12 m8 l8">
+        <div class="row" id="intro">
+          <div class="container">
+         <div class="col s12 m8 l8">
           <!-- 
           This content will be:
           9-columns-wide on large screens,
           8-columns-wide on medium screens,
           12-columns-wide on small screens  -->
           <h1 class="h1-style">
-            Hi, I am Anastasiia! <span style="font-size: 0.7em">♡</span>
+            <span id="element"></span>
           </h1>
-          <p class="paragraph-style">
-            I am a Full Stack Web Developer specializing in MERN stack, as well
-            as Java, Python, Javascript, PHP and other technologies.
-          </p>
-          <p class="paragraph-style">
-            I am currently based in New Orleans, LA area.
-          </p>
+
+          <ul class="paragraph-style">
+            <li><span style="color: #d500f9; margin-right: 10px">></span>Full-Stack Web Developer</li>
+            <li><span style="color: #d500f9; margin-right: 10px">></span>UI/UX Designer</li>
+            <li><span style="color: #d500f9; margin-right: 10px">></span>Graphic Designer</li>
+          </ul>
+          
         </div>
       </div>
       <!-- end of the section content -->
     </div>
 
+    <div class="row" id="intro">
+      <div class="container">
+        <div class="col s12 m8 l8">
+          <h1>Experience</h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
     <!-- ACTION BUTTON -->
 
     <div class="fixed-action-btn">
@@ -136,13 +143,17 @@
     <footer class="page-footer purple accent-3">
       <div class="footer-copyright">
         <div class="container center">
-          <p>Built with ♡ by Anastasiia Balakhan</p>
+          <p>Built with 💕 by Anastasiia Balakhan</p>
         </div>
       </div>
     </footer>
 
-    <!-- Compiled and minified JavaScript -->
+    <script src="index.js"></script>
+     <!-- jQuery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Compiled and minified Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
       // alert("Hello");
       M.AutoInit();
@@ -156,7 +167,12 @@
       $(document).ready(function () {
         $(".scrollspy").scrollSpy();
       });
+
+      var typed = new Typed('#element', {
+        strings: ['Hi, my name is Anastasiia Balakhan'],
+        typeSpeed: 90,
+      });
+
     </script>
-    <script src="index.js" type="text/javascipt"></script>
   </body>
 </html>

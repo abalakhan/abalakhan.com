@@ -18,7 +18,9 @@ nav .nav-wrapper {
 	padding-top: 5%;
 } */
 
+
 .h1-style {
+	font-size: 9.5vh;
 	color: #d500f9;
 	font-family: 'Squada One', sans-serif;
 }
@@ -33,6 +35,9 @@ nav .nav-wrapper {
 	font-weight: 400;
 }
 
+.row{
+	margin: 10% auto 10% auto;
+}
 
 .table-of-contents a {
 	font-size: 1.15rem;

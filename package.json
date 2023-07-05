@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/balanasia/abalakhan/issues"
   },
-  "homepage": "https://github.com/balanasia/abalakhan#readme"
+  "homepage": "https://github.com/balanasia/abalakhan#readme",
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2",
+    "typed.js": "^2.0.16"
+  }
 }
