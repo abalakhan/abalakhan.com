@@ -49,61 +49,111 @@
       </div>
     </nav>
 
-    <!-- Navbar goes here -->
 
-    <!-- Page Layout here -->
-    <div class="row" id="nav">
-      <div class="col s12 m3 l2">
-        <!-- Note that "m4 l3" was added -->
-        <!-- Grey navigation panel
+<!-- Menu -->
 
-          This content will be:
-          3-columns-wide on large screens,
-          4-columns-wide on medium screens,
-          12-columns-wide on small screens  -->
-        <div class="row">
-          <div class="col hide-on-small-only m4 l4">
-            <ul class="section table-of-contents">
-              <li><a href="#home">intro</a></li>
-              <li><a href="#structure">projects</a></li>
-              <li><a href="#initialization">contact</a></li>
-            </ul>
+  <div id="menu" class="class="col hide-on-med-and-down m3 l2">
+    <ul class="section table-of-contents">
+      <li><a href="#intro">intro</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#initialization">contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Greeting -->
+
+  <div id="intro" class="section scrollspy">
+    <div class="row">
+      <div class="container">
+        <h1 class="h1-style">
+          <!-- Typed text function -->
+          <span id="element"></span>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <ul class="paragraph-style" id="typed-strings">
+          <li><span style="color: #d500f9; margin-right: 10px">></span>Full-Stack Web Developer</li>
+          <li><span style="color: #d500f9; margin-right: 10px">></span>UI/UX Designer</li>
+          <li><span style="color: #d500f9; margin-right: 10px">></span>Graphic Designer</li>
+        </ul>
+
+        <!-- <div id="typed-strings">
+          <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+          <p>It <em>types</em> out sentences.</p>
+        </div> -->
+        <span id="typed"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="#experience" class="section scrollspy">
+    <div class="row">
+      <div class="container">
+        <div class="timeline">
+          <div class="container left">
+            <div class="date">15 Dec</div>
+            <i class="icon fa fa-home"></i>
+            <div class="content">
+              <h2>Lorem ipsum dolor sit amet</h2>
+              <p>
+                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="date">22 Oct</div>
+            <i class="icon fa fa-gift"></i>
+            <div class="content">
+              <h2>Lorem ipsum dolor sit amet</h2>
+              <p>
+                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="date">10 Jul</div>
+            <i class="icon fa fa-user"></i>
+            <div class="content">
+              <h2>Lorem ipsum dolor sit amet</h2>
+              <p>
+                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="date">18 May</div>
+            <i class="icon fa fa-running"></i>
+            <div class="content">
+              <h2>Lorem ipsum dolor sit amet</h2>
+              <p>
+                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="date">10 Feb</div>
+            <i class="icon fa fa-cog"></i>
+            <div class="content">
+              <h2>Lorem ipsum dolor sit amet</h2>
+              <p>
+                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="date">01 Jan</div>
+            <i class="icon fa fa-certificate"></i>
+            <div class="content">
+              <h2>Lorem ipsum dolor sit amet</h2>
+              <p>
+                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-        <div class="row" id="intro">
-          <div class="container">
-         <div class="col s12 m8 l8">
-          <!-- 
-          This content will be:
-          9-columns-wide on large screens,
-          8-columns-wide on medium screens,
-          12-columns-wide on small screens  -->
-          <h1 class="h1-style">
-            <span id="element"></span>
-          </h1>
-
-          <ul class="paragraph-style">
-            <li><span style="color: #d500f9; margin-right: 10px">></span>Full-Stack Web Developer</li>
-            <li><span style="color: #d500f9; margin-right: 10px">></span>UI/UX Designer</li>
-            <li><span style="color: #d500f9; margin-right: 10px">></span>Graphic Designer</li>
-          </ul>
-          
-        </div>
-      </div>
-      <!-- end of the section content -->
-    </div>
-
-    <div class="row" id="intro">
-      <div class="container">
-        <div class="col s12 m8 l8">
-          <h1>Experience</h1>
-        </div>
-      </div>
-    </div>
-
-  </div>
     <!-- ACTION BUTTON -->
 
     <div class="fixed-action-btn">
@@ -157,6 +207,18 @@
     <script>
       // alert("Hello");
       M.AutoInit();
+
+      //scrollspy
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems, options);
+      });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
 
       // floating action button
       $(document).ready(function () {
