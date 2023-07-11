@@ -17,8 +17,8 @@ body {
 }
 
 #intro, #experience {
-  margin-top: 170px;
-  margin-bottom: 20px;
+  margin-top: 110px;
+  margin-bottom: 100px;
 }
 
 /* CLASSES */
@@ -128,7 +128,7 @@ nav .nav-wrapper {
   width: 2px;
   height: calc(40% - 30px);
   position: absolute;
-  background: #d2d2d2;
+  background:  #f3e5f5 ;
   left: calc(50% - 1px);
   top: 0;
 }
@@ -139,7 +139,7 @@ nav .nav-wrapper {
   width: 2px;
   height: calc(60% - 40px);
   position: absolute;
-  background: #d2d2d2;
+  background:  #f3e5f5 ;
   left: calc(50% - 1px);
   top: calc(50% + 30px);
 }
@@ -165,7 +165,7 @@ nav .nav-wrapper {
   position: absolute;
   width: 16px;
   height: 16px;
-  background: #d2d2d2;
+  background:  #f3e5f5 ;
   top: calc(45% - 6.5px);
   right: calc(50% - 8px);
   border-radius: 50%;
@@ -176,6 +176,18 @@ nav .nav-wrapper {
 .timeline .timeline-badge i {
   font-size: 25px;
   line-height: 40px;
+}
+
+.lang-tag {
+  font-weight: 400;
+  padding-right: 2%;
+  color: #0091ea;
+}
+
+.tool-tag{
+  font-weight: 400;
+  padding-right: 2%;
+  color: #00c853;
 }
 
 @media (max-width: 600px) {
