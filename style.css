@@ -18,7 +18,7 @@ body {
 
 #intro, #experience {
   margin-top: 110px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 /* CLASSES */
@@ -103,7 +103,7 @@ nav .nav-wrapper {
 	}
 }
 
-/* Timeline */
+/* Timeline functionality */
 
 .timeline {
   position: relative;
@@ -128,7 +128,7 @@ nav .nav-wrapper {
   width: 2px;
   height: calc(40% - 30px);
   position: absolute;
-  background:  #f3e5f5 ;
+  background:  #e0e0e0;
   left: calc(50% - 1px);
   top: 0;
 }
@@ -139,7 +139,7 @@ nav .nav-wrapper {
   width: 2px;
   height: calc(60% - 40px);
   position: absolute;
-  background:  #f3e5f5 ;
+  background:  #e0e0e0;
   left: calc(50% - 1px);
   top: calc(50% + 30px);
 }
@@ -178,6 +178,8 @@ nav .nav-wrapper {
   line-height: 40px;
 }
 
+/* Timeline Styling */
+
 .lang-tag {
   font-weight: 400;
   padding-right: 2%;
@@ -187,8 +189,32 @@ nav .nav-wrapper {
 .tool-tag{
   font-weight: 400;
   padding-right: 2%;
-  color: #00c853;
+  color: #A459D1;
 }
+
+li.elem {
+  list-style-type: circle !important;
+}
+
+li.elem::marker {
+  color: #EF9A53;
+  font-size: 1.5vw;
+  margin-top: 1%;
+}
+
+.card .card-content .card-title{
+  font-weight: 400;
+}
+/* date styling */
+.card .card-content p {
+  color: #757575 
+}
+
+.company {
+  color: #EF9A53;
+  font-style: italic;
+}
+
 
 @media (max-width: 600px) {
   .timeline .timeline-event .timeline-content {
@@ -210,3 +236,5 @@ nav .nav-wrapper {
       left: 2.5%;
   }
 }
+
+
