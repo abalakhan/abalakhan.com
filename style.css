@@ -13,12 +13,27 @@ body {
 
 
 .table-of-contents a.active {
-  border-left: 2px solid #d500f9;
+  border-left: 2px solid #d500f9
 }
 
 #intro, #experience {
   margin-top: 110px;
   margin-bottom: 200px;
+}
+
+/* Skills */
+
+#skills {
+  background-color: #20262E;
+}
+
+.card-image {
+  font-size: 5vw;
+  margin: 5%;
+}
+
+#skills .card {
+ padding: 5%;
 }
 
 /* CLASSES */
