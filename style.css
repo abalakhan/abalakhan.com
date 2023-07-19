@@ -1,5 +1,7 @@
 body {
 	font-family: 'Poppins', sans-serif;
+  background-color: #2B2730;
+  color: #e0e0e0;
 }
 
 .social-header {
@@ -13,18 +15,28 @@ body {
 
 
 .table-of-contents a.active {
-  border-left: 2px solid #d500f9
+  border-left: 2px solid #f06292;
 }
 
-#intro, #experience {
-  margin-top: 110px;
-  margin-bottom: 200px;
+.table-of-contents a:hover{
+  color: #fff;
+}
+
+#intro {
+  padding-top: 60px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+#experience{
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 /* Skills */
 
 #skills {
-  background-color: #20262E;
+  background-color: #3d4249;
 }
 
 .card-image {
@@ -39,7 +51,7 @@ body {
 /* CLASSES */
 
 nav .brand-logo {
-	color: #d500f9;
+	color: #f06292;
 	font-family: 'Squada One', sans-serif;
 	font-size: 3em;
 }
@@ -55,13 +67,17 @@ nav .nav-wrapper {
 
 .h1-style {
 	font-size: 9.5vh;
-	color: #d500f9;
+	color: #f06292;
 	font-family: 'Squada One', sans-serif;
 }
 
+.h2-style {
+  color: #f06292;
+}
+
 .paragraph-style{
+  color: #e0e0e0;
 	font-size: 1.5em;
-	color: #757575 ;
 	margin-top: 0;
 	text-align: left;
 	margin-right: 15%;
@@ -76,17 +92,19 @@ nav .nav-wrapper {
 
 .table-of-contents a {
 	font-size: 1.15rem;
-	color: #757575;
+	color: #e0e0e0;
   padding-left: 5%;
 }
 
 .table-of-contents a:hover{
-	border-left: 2px solid #d500f9;
+	border-left: 2px solid #f06292;
+  font-weight: 500;
 }
 
 .table-of-contents a:active {
 	color: black;
 }
+
 
 /* PULSING EFFECT */
 .blob {
@@ -204,7 +222,7 @@ nav .nav-wrapper {
 .tool-tag{
   font-weight: 400;
   padding-right: 2%;
-  color: #A459D1;
+  color: #ce93d8;
 }
 
 li.elem {
@@ -217,17 +235,24 @@ li.elem::marker {
   margin-top: 1%;
 }
 
+.card-panel {
+  background-color: rgba(0,0,0,0.1);
+}
+
+
 .card .card-content .card-title{
   font-weight: 400;
 }
 /* date styling */
-.card .card-content p {
-  color: #757575 
-}
+
 
 .company {
   color: #EF9A53;
   font-style: italic;
+}
+
+.card-title {
+  color: #ffff;
 }
 
 
