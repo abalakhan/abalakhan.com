@@ -36,8 +36,29 @@ body {
 /* Projects */
 
 .project-card {
-  height: 250px;
-  background-color: red;
+  text-align: right;
+  background-color: #E4A5FF;
+  border-radius: 5%;
+  color: #424242;
+  display: flexbox;
+}
+
+.project-card:nth-child(2){
+  background-color: #FFCDA8;
+}
+
+.project-card:nth-child(3){
+  background-color: #73BBC9;
+}
+
+.project-type{
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.card .card-action {
+  color:  #424242;
 }
 
 
@@ -49,7 +70,6 @@ body {
 
 .card-image {
   font-size: 5vw;
-  margin: 5%;
 }
 
 #skills .card {
