@@ -4,6 +4,33 @@ body {
   color: #e0e0e0;
 }
 
+/* Typography  */
+
+.h1-style {
+	font-size: 9.5vh;
+	color: #f06292;
+	font-family: 'Squada One', sans-serif;
+}
+
+.h2-style {
+  color: #f06292;
+}
+
+.paragraph-style{
+  color: #e0e0e0;
+	font-size: 1.5em;
+	margin-top: 0;
+	text-align: left;
+	margin-right: 15%;
+	line-height: 1.5em;
+	font-weight: 400;
+}
+
+
+h3 {
+  color: black;
+}
+
 .social-header {
   display: inline-flex;
   padding: 0 5% 0 5%;
@@ -37,22 +64,19 @@ body {
 
 .project-card {
   text-align: right;
-  background-color: #E4A5FF;
-  border-radius: 5%;
+  border-radius: 10%;
   color: #424242;
   display: flexbox;
 }
 
-.project-card:nth-child(2){
-  background-color: #FFCDA8;
-}
-
-.project-card:nth-child(3){
-  background-color: #73BBC9;
-}
-
 .project-type{
   font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.project-name{
+  font-size: 2.7rem;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -92,26 +116,6 @@ nav .nav-wrapper {
 	padding-top: 5%;
 } */
 
-
-.h1-style {
-	font-size: 9.5vh;
-	color: #f06292;
-	font-family: 'Squada One', sans-serif;
-}
-
-.h2-style {
-  color: #f06292;
-}
-
-.paragraph-style{
-  color: #e0e0e0;
-	font-size: 1.5em;
-	margin-top: 0;
-	text-align: left;
-	margin-right: 15%;
-	line-height: 1.5em;
-	font-weight: 400;
-}
 
 #menu {
 	position: fixed;
@@ -281,6 +285,17 @@ li.elem::marker {
 
 .card-title {
   color: #ffff;
+}
+
+.card .card-image img {
+  border-radius: 10% 0;
+  width: 90%;
+  left: 10%;
+}
+
+.github-cta {
+  padding: 2%;
+  background-color: #a7ffeb;
 }
 
 
