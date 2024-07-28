@@ -19,10 +19,10 @@ jobs:
     - name: Inject secrets into env.js
       run: |
         echo "window.env = {" > ./js/env.js
-        echo "  senderEmail: '${{ secrets.SENDER_EMAIL }}'," >> ./public/env.js
-        echo "  recieverEmail: '${{ secrets.RECEIVER_EMAIL }}'," >> ./public/env.js
-        echo "  securityToken: '${{ secrets.SECURITY_TOKEN }}'" >> ./public/env.js
-        echo "};" >> ./public/env.js
+        echo "  senderEmail: '${{ secrets.SENDER_EMAIL }}'," >> ./jsc/env.js
+        echo "  recieverEmail: '${{ secrets.RECEIVER_EMAIL }}'," >> ./js/env.js
+        echo "  securityToken: '${{ secrets.SECURITY_TOKEN }}'" >> ./js/env.js
+        echo "};" >> ./js/env.js
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
