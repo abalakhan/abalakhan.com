@@ -18,7 +18,7 @@ jobs:
 
     - name: Inject secrets into env.js
       run: |
-        echo "window.env = {" > ./public/env.js
+        echo "window.env = {" > ./js/env.js
         echo "  senderEmail: '${{ secrets.SENDER_EMAIL }}'," >> ./public/env.js
         echo "  recieverEmail: '${{ secrets.RECEIVER_EMAIL }}'," >> ./public/env.js
         echo "  securityToken: '${{ secrets.SECURITY_TOKEN }}'" >> ./public/env.js
