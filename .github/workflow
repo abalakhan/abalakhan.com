@@ -1,45 +1,28 @@
-# This is a basic workflow to help you get started with Actions
+name: Deploy to GitHub Pages
 
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  build-and-deploy:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-      - name: name: Use variables
+    - name: Inject secrets into env.js
       run: |
-        echo "security token variable : $SECURITY_TOKEN"
-        echo "organization variable : $RECEIVER_EMAIL"
-        echo "overridden variable : $OVERRIDE_VAR"
-      env:
-        SECURITY_TOKEN: ${{ vars.SECURITY_TOKEN  }}
-        RECEIVER_EMAIL: ${{ vars.RECEIVER_EMAIL }}
-        OVERRIDE_VAR: ${{ vars.OVERRIDE_VAR }}
+        echo "window.env = {" > ./public/env.js
+        echo "  senderEmail: '${{ secrets.SENDER_EMAIL }}'," >> ./public/env.js
+        echo "  recieverEmail: '${{ secrets.RECEIVER_EMAIL }}'," >> ./public/env.js
+        echo "  securityToken: '${{ secrets.SECURITY_TOKEN }}'" >> ./public/env.js
+        echo "};" >> ./public/env.js
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
