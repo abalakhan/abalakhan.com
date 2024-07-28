@@ -2,6 +2,7 @@ const SECURITY_TOKEN = process.env.SECURITY_TOKEN;
 const RECEIVER_EMAIL = process.env.RECEIVER_EMAIL;
 const SENDER_EMAIL = process.env.SENDER_EMAIL;
 
+
 //init floating button
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
