@@ -54,14 +54,30 @@
             <div class="nav-wrapper">
               <a href="index.html" class="brand-logo"><span class="dot-the-eyes">ii</span></a>
               <a href="index.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down">
-                <li class="nav-item"><a href="#work"><i class="fa-solid fa-folder nav-icon"></i>Works</a></li>
-                <li class="nav-item"><a href="#about"><i class="fa-solid fa-heart"></i>About</a></li>
-                <li id="contact" class="nav-item"><a href=""><i class="fa-solid fa-moon"></i></i>Contact</a></li>
-                <li class="nav-item"><a href="https://abalakhan.github.io/resume/" target="_blank"><i class="fa-solid fa-star"></i>Resume</a></li>
+              <ul class="right">
+                <li class="nav-item hide-on-med-and-down"><a href="#work"><i class="fa-solid fa-folder nav-icon"></i>Works</a></li>
+                <li class="nav-item hide-on-med-and-down"><a href="#about"><i class="fa-solid fa-heart"></i>About</a></li>
+                <li class="nav-item hide-on-med-and-down"><a href="#contact"><i class="fa-solid fa-moon"></i></i>Contact</a></li>
+                <li class="nav-item hide-on-med-and-down"><a href="https://abalakhan.github.io/resume/" target="_blank"><i class="fa-solid fa-star"></i>Resume</a></li>
+                <li class="nav-item switcher">
+                  <div>
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="switch checkbox-label">
+                      <i class="fas fa-moon"></i>
+                      <i class="fas fa-sun"></i>
+                      <span class="ball"></span>
+                    </label>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
+          <div class="progress-bar" />
+          <button class="back-to-top hidden">
+            <!-- <i class="fa-solid fa-arrow-up"></i> -->
+            <i class="material-icons arrow-up">arrow_drop_up</i>
+          </button>
+          <div class="progress-bar" />
         </nav>
       </div>
       
@@ -69,7 +85,7 @@
       <ul class="sidenav" id="mobile-demo">
         <li><a href="#work"><i class="fa-solid fa-folder nav-icon"></i>Works</a></li>
         <li class="nav-item"><a href="#about"><i class="fa-solid fa-heart nav-icon"></i>About</a></li>
-        <li id="contact" class="nav-item"><a href=""><i class="fa-solid fa-moon nav-icon"></i></i>Contact</a></li>
+        <li class="nav-item"><a href="#contact"><i class="fa-solid fa-moon nav-icon"></i></i>Contact</a></li>
         <li class="nav-item"><a href="https://abalakhan.github.io/resume/" target="_blank"><i class="fa-solid fa-star nav-icon"></i>Resume</a></li>
       </ul>
 
@@ -79,9 +95,9 @@
           <div class="dot-the-eyes">ii</div>
         </a>
         <ul>
-          <li><a href="mailto:anabalasia@gmail.com" class="btn-floating inside-button"><i class="fa-solid fa-envelope"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/abalakhan/" class="btn-floating inside-button"><i class="fa-brands fa-linkedin-in"></i></a></li>
-          <li><a href="https://github.com/abalakhan" class="btn-floating inside-button"><i class="fa-brands fa-github-alt github-floating"></i></a></li>
+          <li><a href="#contact" class="btn-floating inside-button"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/abalakhan/" target="_blank" class="btn-floating inside-button"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://github.com/abalakhan" target="_blank" class="btn-floating inside-button"><i class="fa-brands fa-github-alt github-floating"></i></a></li>
           <li><a href="https://abalakhan.github.io/resume/" target="_blank" class="btn-floating inside-button"><i class="fa-solid fa-paperclip"></i></a></li>
         </ul>
       </div>
@@ -98,14 +114,14 @@
           </div>
             <div class="content">
               <h1 class="top-header">I'm Anastas<span class="dot-the-eyes">ii</span>a</h1>
-              <h6 class="hero-subhead">Software Engineer, Web Designer, Color & Music Enjoyer (✦ ‿ ✦) ♪♡</h6>
+              <h6 class="hero-subhead">Software Engineer, Web Designer, Color & Music Enjoyer</h6>
               <div class="socials-wrap">
-                <a href="mailto:anabalasia@gmail.com" target="_blank" class="btn-floating btn waves-effect waves-light rounded hero-link">
+                <a href="#contact" class="btn-floating btn waves-effect waves-light rounded hero-link">
                   <i class="fa-solid fa-envelope"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/abalakhan/" class="btn-floating btn waves-effect waves-light rounded hero-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/abalakhan" class="btn-floating btn waves-effect waves-light rounded hero-link"><i class="fa-brands fa-github-alt github-floating"></i></a>
-                <a href="https://abalakhan.github.io/resume/" class="btn-floating btn waves-effect waves-light rounded hero-link"><i class="fa-solid fa-paperclip"></i></a>
+                <a href="https://www.linkedin.com/in/abalakhan/" target="_blank" class="btn-floating btn waves-effect waves-light rounded hero-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/abalakhan" target="_blank" class="btn-floating btn waves-effect waves-light rounded hero-link"><i class="fa-brands fa-github-alt github-floating"></i></a>
+                <a href="https://abalakhan.github.io/resume/" target="_blank" class="btn-floating btn waves-effect waves-light rounded hero-link" target=="_blank"><i class="fa-solid fa-paperclip"></i></a>
 
               </div>
             </div>
@@ -121,7 +137,7 @@
           <!-- ROW 1 -->
 
           <div class="row py-3">
-            <div class="col s12 m12 l6 p-3">
+            <div class="col s12 m6 l6 p-3">
 
               <!-- CARD 1 -->
               
@@ -131,7 +147,7 @@
                 </div>
                 <div class="card-content">
                   <span class="card-title activator"><i class="material-icons right">expand_more</i></span>
-                  <p class="card-eyebrow">website</p>
+                  <span class="card-eyebrow">website</span>
                   <h4 class="card-title activator">Sparrow Photography</h4>
                 </div>
                 <img class="card-img" src="img/sparrow-photography.png">
@@ -172,7 +188,7 @@
 
             <!-- CARD 2 -->
 
-            <div class="col s12 m12 l6 p-3">
+            <div class="col s12 m6 l6 p-3">
               <div class="card red lighten-4">
                 <div class="card-image">
                   <div class="activator waves-effect waves-light" style="position:absolute;top:0;bottom:0;right:0;left:0;"></div>
@@ -211,7 +227,7 @@
           <!-- ROW 2 -->
 
           <div class="row py-3">
-            <div class="col s12 m12 l6 p-3">
+            <div class="col s12 m6 l6 p-3">
               
               <!-- CARD 3 -->
 
@@ -250,7 +266,7 @@
               </div>
               
             </div>
-            <div class="col s12 m12 l6 p-3">
+            <div class="col s12 m6 l6 p-3">
               <!-- CARD 4 -->
 
               <div class="card blue lighten-4">
@@ -296,16 +312,15 @@
       <section class="about-section" id="about">
         <div class="container">
           <div class="row about-row">
-            <div class="col s12 m6 l6">
-              <img class="about-graphic" src="img/Tamagotchi-Anastasiia.png" alt="Anastasiia Balakhan" />
+            <div class="col s12 m6 l6 center">
+              <img class="responsive-img px-5" src="img/about-graphic.png" alt="Anastasiia Balakhan" />
             </div>
-            <div class="col s12 m6 l6 about-content">
-              <h2 class="about-header py-4">Who is Anastas<span class="dot-the-eyes">ii</span>a?</h2>
-              <p>Hey there, I am Anastasiia Balakhan <span class="prounouns">(she/they)</span>.
-                <br> I am a Full Stack Software Engineer and Web Designer. </p>
-              <p> I was born and raised in Kyiv, Ukraine and moved to USA when I was 17 and lived here since then.</p>
-              <p>Over the past 9 years I have been improving myself as a programmer, as well as a designer. I also have experience as a graphic designer and I am flexible to learn new skills as I go.</p>
-              <p>I am always open to expanding my professional and creative horizons. <br> In my free time I enjoy execising, arts and crafts, reading and music. </p>
+            <div class="col s12 m6 l6 about-content px-5">
+              <h2>I'm Anastas<span class="dot-the-eyes">ii</span>a</h2>
+              <p>Software Engineer and Web Designer, born and raised in <br> <a href="https://www.leleka.care/" target="_blank" class="tooltipped" data-position="top" data-tooltip="This is a foundation focusing on medical and first-aid supplies distribution. I'd appreciate your help!">Kyiv, Ukraine</a> and now based in USA.</p>
+              <p>Over the past 9 years I've gained extensive experience with software development, as well UI/UX design and digital design. 
+              <br>I am always expanding my professional and creative horizons.</p>
+              <p>In my free time I enjoy execising, arts and crafts, reading and music. </p>
             </div>
           </div>
                 
@@ -313,6 +328,44 @@
       </section>
 
       <!-- get in touch -->
+
+      <div class="contact" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m12 l6 px-5">
+              <h2 class="contact-header">Get in Touch</h2>
+              <form>
+                <div class="input-field">
+                  <input class="item" id="name" type="text" class="validate" placeholder=" ">
+                  <label class="active" for="name">Name</label>
+                  <span class="supporting-text error-txt" data-error="wrong" data-success="right">Name cannot be blank</span>
+                </div>
+                <div class="input-field inline">
+                  <input class="item" id="email" type="email" class="validate" placeholder=" ">
+                  <label for="email">Email</label>
+                  <span class="supporting-text error-txt email" data-error="wrong" data-success="right">Email cannot be blank</span>
+                </div>
+                <div class="input-field">
+                  <input class="item" id="subject" type="text" class="validate" placeholder="Hello! c:">
+                  <label class="active" for="subject">Subject</label>
+                  <span class="supporting-text error-txt" data-error="wrong" data-success="right">Subject cannot be blank</span>
+                </div>
+                <div class="input-field">
+                  <textarea class="materialize-textarea item" id="textarea" class="materialize-textarea" maxlength="120" placeholder=" "></textarea>
+                  <label for="textarea">Your Message</label>
+                  <span class="supporting-text error-txt" data-error="wrong" data-success="right">Message cannot be blank</span>
+                </div>
+                <button class="btn filled icon-right rounded waves-effect waves-light contact-button" type="submit">
+                  Submit
+                </button>
+              </form>  
+            </div>
+            <div class="col s12 m12 l6 center">
+              <img class="responsive-img" src="img/girl-working.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- footer -->
 
@@ -327,7 +380,7 @@
               <ul>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#about">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="https://abalakhan.github.io/resume/">Resume</a></li>
               </ul>
             </div>
@@ -346,10 +399,14 @@
          </div>
         </div>
       </footer>
-            
 
-    <!-- Compiled and minified JavaScript -->
+    <!-- Compiled and minified Materialize CSS JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3-alpha/dist/js/materialize.min.js"></script>
+    <!-- SMTP JS CDN -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- Sweet Alert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Local JS -->
     <script src="js/index.js" ></script>
   </body>
   </html>
