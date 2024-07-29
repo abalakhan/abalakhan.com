@@ -63,7 +63,7 @@ function sendEmail(name, email, subject, message) {
 
   Email.send({
       SecureToken: window.env.securityToken,
-      To: "receiver@example.com", // Update with actual receiver email
+      To: window.env.senderEmail,
       From: window.env.senderEmail,
       Subject: subjectMessage,
       Body: bodyMessage
