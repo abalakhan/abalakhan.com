@@ -619,9 +619,9 @@ button.btn.filled.icon-right.rounded.waves-effect.waves-light.contact-button {
   font-weight: 600;
 }
 
-/* .contact-graphic {
-  max-width: 600px;
-} */
+.input-field .supporting-text {
+  padding: 2px 0px 6px 15px;
+}
 
 .col.s12.m12.l6.center {
   display: flex;
