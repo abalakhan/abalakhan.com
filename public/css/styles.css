@@ -47,6 +47,10 @@ h4, h5, h6 {
   font-family: "Freeman", sans-serif;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 /* DARK MODE  */
 body.dark {
   background-color: #8644A2;
