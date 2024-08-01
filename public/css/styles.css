@@ -103,6 +103,10 @@ body.dark {
   color: #f7f7f7;
 }
 
+.dark .preloader-container {
+  background-color: #292929;
+}
+
 /* THEME SWITCHER */
 .checkbox-label {
   background-color: #f9f9f9;
@@ -708,32 +712,5 @@ i.material-icons.arrow-up {
     display: block;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #8644A2;
-    color: #fff;
-  }
-  .top-section {
-    background-color: #333333;
-  }
-  nav {
-    background-color: #8644A2;
-  }
-  nav ul:not(.dropdown-content) > li > a {
-    color: #fff;
-  }
-  nav ul:not(.dropdown-content) > li > a:hover {
-    color: #FFEBB2;
-  }
-  .pop-over {
-    background-color: #292929;
-    color: #fff;
-  }
-  .page-footer {
-    background-color: #272727;
-  }
-}
-
 
 /*# sourceMappingURL=styles.css.map */

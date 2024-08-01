@@ -159,11 +159,34 @@ backToTopButton.addEventListener("click", goToTop);
 
 // theme switcher
 const heroWindow = document.querySelector('.pop-over');
-const checkbox = document.getElementById("checkbox")
+const checkbox = document.getElementById("checkbox");
+
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark");
   backToTopButton.classList.add("dark-popover");
 })
+
+// Function to apply the dark theme
+function applyDarkTheme(isDark) {
+  if (isDark) {
+    document.body.classList.add("dark");
+    heroWindow.classList.add("dark-popover");
+    checkbox.checked = true;
+  } else {
+    document.body.classList.remove("dark");
+    heroWindow.classList.remove("dark-popover");
+    checkbox.checked = false;
+  }
+}
+
+// Check for system preference
+const systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+applyDarkTheme(systemPreference.matches);
+
+// Listen for system preference changes
+systemPreference.addEventListener('change', (e) => {
+  applyDarkTheme(e.matches);
+});
 
 // preloader func
 let box = document.querySelector("#preloader"),
