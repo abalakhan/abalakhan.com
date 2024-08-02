@@ -107,6 +107,10 @@ body.dark {
   background-color: #292929;
 }
 
+.dark .character-counter {
+  color: #f7f7f7;
+}
+
 /* THEME SWITCHER */
 .checkbox-label {
   background-color: #f9f9f9;
