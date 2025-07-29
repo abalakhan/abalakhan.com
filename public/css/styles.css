@@ -20,10 +20,24 @@ body {
 a {
   color: #FFEBB2;
   font-weight: 600;
+  transition: 0.9s;
+}
+
+a:hover {
+  color: #292929;
 }
 
 p {
   font-family: "Inter", sans-serif;
+}
+
+.breadcrumb {
+  color: #292929;
+  transition: 0.9s;
+}
+
+.breadcrumb:hover {
+  color: #FFEBB2;
 }
 
 .top-header {
@@ -109,6 +123,22 @@ body.dark {
 
 .dark .character-counter {
   color: #f7f7f7;
+}
+
+.dark .project-website {
+    color: #f7f7f7;
+}
+
+.dark .project-website:hover {
+    color: #FFEBB2;
+}
+
+.dark .breadcrumb {
+  color: #f7f7f7;
+}
+
+.dark .breadcrumb:hover {
+  color: #FFEBB2;
 }
 
 /* THEME SWITCHER */
@@ -472,20 +502,31 @@ a.btn-floating.btn.waves-effect.waves-light.rounded.hero-link {
   border-radius: 35px;
   min-height: 500px;
   max-width: 500px;
+  transition: all 0.5s ease-in-out;
 }
 
+.card:hover{
+  background: #333 ;
+  color: whitesmoke; 
+  box-shadow: 0 0 10px 2px #f7f7f7;
+}
+
+.card 
+
 .card-img {
-  display: flex;
   position: absolute;
   top: 130px;
   left: 70px;
   border-radius: 15px;
+  width: 120%;
+  height: auto;
 }
 
 .card .card-content {
   padding: 24px 24px 5px 24px;
   border-radius: 0 0 2px 2px;
 }
+
 
 .card .card-title {
   font-size: 2.28rem;
@@ -525,13 +566,6 @@ h4.card-title > a:hover {
 
 .material-icons {
   font-size: 34px;
-}
-
-.skill {
-  margin: 5px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 10px;
 }
 
 /* ABOUT */
@@ -691,6 +725,74 @@ i.material-icons.arrow-up {
   position: fixed;
   top: 80px;
   left: 0;
+}
+
+/* PROJECT */
+.project-container {
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.project-desc {
+  padding-top: 2px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+  line-height: 1.8rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-desc .collaborator-image {
+  height: auto;
+  width: 60px;
+  border-radius: 50%;  
+  border: 2px solid #FFEBB2;
+}
+
+.project-website {
+  color: #2c2c2c;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.7s ease-in;
+  margin: 0px;
+}
+
+.project-website:hover {
+  color: #FFEBB2;
+}
+
+.project-img {
+  height: auto;
+  width: 100%;
+}
+
+.project-button {
+  background-color:  #2C2C2C;
+}
+
+.link-grid {
+  padding-top: 15px;
+}
+
+.tools-list {
+  padding-top: 20px;
+}
+
+.skill {
+  margin: 5px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 10px;
+  border-radius: 25px;
+  background-color: #f7f7f7;
+  color: #2C2C2C;
+}
+
+.skill:hover {
+  background-color: #f7f7f7;
+  color: #2C2C2C;
 }
 
 /* MEDIA */
