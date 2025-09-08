@@ -141,6 +141,10 @@ body.dark {
   color: #FFEBB2;
 }
 
+.dark .page-footer a:hover {
+  color: #FFEBB2;
+}
+
 /* THEME SWITCHER */
 .checkbox-label {
   background-color: #f9f9f9;
