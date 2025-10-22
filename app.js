@@ -56,7 +56,6 @@ const projects = [
         timeline: '2025',
         website: 'https://meetmarigold.com/cti/overview/',
         role: 'Full Stack Developer, Coding Lead',
-        collab: [{ name: 'Maggie Myklebust', website: 'https://www.maggiemyklebust.design/' }],
         skills: ["PHP", "Javascript","HTML", "SCSS", "Bootstrap", "Wordpress Theme Building", "Figma"]
     },
     {
