@@ -140,6 +140,8 @@ app.post("/submit", (req, res) => {
 // Healthcheck
 app.get("/healthcheck", (req, res) => res.status(200).send("ok"));
 
+app.get("/", (req, res) => res.status(200).send("ok"));
+
 // 404 handler
 app.use("*", (req, res) => res.status(404).send("404"));
 
