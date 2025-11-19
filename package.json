@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build",
+    "dev": "vite"
   },
   "author": "Anastasiia Balakhan",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "ejs": "^3.1.10",
     "elasticemail": "^0.2.0",
     "express": "^4.19.2",
+    "express-rate-limit": "^8.2.1",
     "isomorphic-fetch": "^3.0.0",
     "materialize-css": "^1.0.0-rc.2",
     "my-website": "^0.0.2"

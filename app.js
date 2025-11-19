@@ -2,36 +2,61 @@ import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import request from 'request';
+import rateLimit from 'express-rate-limit';
 
- // CHANGE PACKAGE.JSON TO BEFORE DEPLOY "start": "node app.js"
+dotenv.config(); // Load environment variables
 
 const app = express();
 const PORT = process.env.PORT || 3030;
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended : false}));
-
+app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
-app.set('views', './views'); // Ensure views folder is correctly set
+app.set('views', './views'); // ensure views folder
+app.use(express.static("public")); // only serve your public folder
 
-app.use(express.static("public"));
+app.use((req, res, next) => {
+  const path = req.path.toLowerCase();
 
-dotenv.config(); // Load environment variables from .env file
+  if (path.startsWith("/@fs")) return res.status(403).send("Forbidden");
 
+  if (path.startsWith("/.env")) return res.status(403).send("Forbidden");
+
+  if (path.match(/\.(yaml|yml|ini|toml|sql|bak|backup|zip|tar|gz|sh)$/i)) {
+    return res.status(403).send("Forbidden");
+  }
+
+  const wpPaths = [/^\/wp-admin/, /^\/wp-login/, /^\/wp-content/, /^\/wp-includes/, /^\/xmlrpc\.php/];
+  if (wpPaths.some(r => r.test(path))) return res.status(403).send("Forbidden");
+
+  if (path.endsWith(".php") || path.startsWith("/vendor")) return res.status(403).send("Forbidden");
+
+  if (path.includes("..")) return res.status(403).send("Forbidden");
+
+  const badChars = ['%00', '%0d', '%0a', '<', '>', 'javascript:'];
+  if (badChars.some(c => req.url.toLowerCase().includes(c))) return res.status(403).send("Forbidden");
+
+  next();
+});
+
+app.use(rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 300,                  // max 300 requests per IP per window
+  standardHeaders: true,
+  legacyHeaders: false
+}));
+
+// HEALTHCHECK ONLY
+app.get("/healthcheck", (req, res) => res.status(200).send("ok"));
+app.head("/healthcheck", (req, res) => res.status(200).end());
+
+// HOMEPAGE
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+  res.render("index");
 });
 
-app.get("/project/:projectId", (req, res) => {
-    const projectId = req.params.projectId;
-    const project = projects.find(p => p.id === projectId);
+app.use((req, res) => res.status(404).send("404 Not Found"));
 
-    if (!project) {
-        return res.status(404).send("Project not found");
-    }
-
-    res.render("project", { project });  // Ensure project is passed
-});
 
 const projects = [
     {
@@ -99,10 +124,6 @@ const projects = [
         skills: ["HTML", "CSS", "JS", "Bootstrap", "Express.js", "Node.js", "EJS"]
     }
 ];
-// Routes
-app.get("/", (req, res) => {
-  res.render("index");
-});
 
 app.get("/project/:projectId", (req, res) => {
   const project = projects.find((p) => p.id === req.params.projectId);
@@ -110,7 +131,7 @@ app.get("/project/:projectId", (req, res) => {
   res.render("project", { project });
 });
 
-// Config endpoint
+// CONFIG
 app.get("/config", (req, res) => {
   res.json({
     secureToken: process.env.SECURE_TOKEN,
@@ -119,7 +140,7 @@ app.get("/config", (req, res) => {
   });
 });
 
-// Submit endpoint (captcha)
+// SUBMIT + RECAPTCHA
 app.post("/submit", (req, res) => {
   const captcha = req.body["g-recaptcha-response"];
   if (!captcha) {
@@ -137,13 +158,8 @@ app.post("/submit", (req, res) => {
   });
 });
 
-// Healthcheck
-app.get("/healthcheck", (req, res) => res.status(200).send("ok"));
-
-app.get("/", (req, res) => res.status(200).send("ok"));
-
-// 404 handler
-app.use("*", (req, res) => res.status(404).send("404"));
+// FINAL 404
+app.use((req, res) => res.status(404).send("404"));
 
 app.listen(PORT, () => {
   console.log(`App started at http://localhost:${PORT}`);
