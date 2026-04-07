@@ -22,5 +22,8 @@
     "isomorphic-fetch": "^3.0.0",
     "materialize-css": "^1.0.0-rc.2",
     "my-website": "^0.0.2"
+  },
+  "devDependencies": {
+  "vite": "^5.0.0"
   }
 }
