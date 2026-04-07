@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "build": "vite build",
+    "build": "react-scripts build",
     "dev": "vite"
   },
   "author": "Anastasiia Balakhan",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "react-scripts": "^5.0.1",
     "@lottiefiles/dotlottie-web": "^0.28.0",
     "cjs": "^0.0.11",
     "dotenv": "^16.4.5",
